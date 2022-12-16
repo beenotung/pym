@@ -4,7 +4,7 @@ Works like npm (nodejs package manager) but for python.
 
 ## Features
 
-- Dependecies are installed locally (per project) with `venv` in `./python_module`
+- Dependencies are installed locally (per project) with `venv` in `./python_module`
 
 - Directly installed dependencies are added to `requirements.txt` automatically
 
