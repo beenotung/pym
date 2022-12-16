@@ -8,6 +8,8 @@ Works like npm (nodejs package manager) but for python.
 
 - Dependencies are added to `requirements.txt` automatically
 
+- Cross platform: it works on Linux, Mac, and Windows (with git bash)
+
 - This cli tool is a single executable file, you can name it whatever you want, e.g. pym, py, pm, or just p
 
 ## Usage
