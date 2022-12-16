@@ -10,6 +10,36 @@ Works like npm (nodejs package manager) but for python.
 
 - This cli tool is a single executable file, you can name it whatever you want, e.g. pym, py, pm, or just p
 
+## Usage
+
+```
+pym - python package manager
+version: 0.1
+
+Usage: pym [command]
+
+Commands:
+
+  version:
+    (Alias: v, -v, --version)
+    Show version of this cli tool
+
+  help:
+    (Alias: h, -h, --help)
+    Show this help message
+
+  init:
+    Setup dependecy environment with venv in python_modules
+
+  install:
+    (Alias: i, add, a)
+    Install dependecy packages locally with venv project, auto init if needed
+
+  run:
+    (Alias: r)
+    Run the python script within virtual envrionment, auto init if needed
+```
+
 ## Why this name?
 
 As inspired by npm (nodejs package manager), I named this tool ppm (python package manager) initially.
