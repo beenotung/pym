@@ -1,6 +1,6 @@
 # pym - python package manager
 
-Works like npm (nodejs package manager) but for python.
+A package manager for python that works like npm.
 
 ## Features
 
