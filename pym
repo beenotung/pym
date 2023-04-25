@@ -66,9 +66,15 @@ function find-python {
 }
 
 function select-python {
-  hash python 2>/dev/null && python=python ||
-    hash python3 2>/dev/null && python=python3 ||
+  if [ "$python" == "" ]; then
+    hash python 2>/dev/null && python=python || true
+  fi
+  if [ "$python" == "" ]; then
+    hash python3 2>/dev/null && python=python3 || true
+  fi
+  if [ "$python" == "" ]; then
     find-python
+  fi
 }
 
 function setup-gitignore {
