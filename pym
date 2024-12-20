@@ -95,9 +95,20 @@ function init {
   setup-gitignore 2>/dev/null || true
 }
 
+function activate_env {
+  if [ -d python_modules/bin ]; then
+    source python_modules/bin/activate
+  elif [ -d python_modules/Scripts ]; then
+    source python_modules/Scripts/activate
+  else
+    echo "python_modules/bin or python_modules/Scripts not found"
+    exit 1
+  fi
+}
+
 function install-dep {
   init
-  source python_modules/bin/activate
+  activate_env
   echo "installing packages in requirements.txt"
   pip install -r requirements.txt
   for dep in $@; do
@@ -113,7 +124,7 @@ function run {
   if [ ! -d python_modules ]; then
     install-dep
   fi
-  source python_modules/bin/activate
+  activate_env
   python $@
 }
 
